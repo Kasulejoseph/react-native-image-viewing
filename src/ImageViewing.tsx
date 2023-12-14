@@ -6,7 +6,7 @@
  *
  */
 
-import React, { ComponentType, useCallback, useRef, useEffect } from "react";
+import React, { ComponentType, useCallback, useRef, useEffect, PropsWithChildren } from "react";
 import {
   Animated,
   Dimensions,
@@ -66,7 +66,8 @@ function ImageViewing({
   delayLongPress = DEFAULT_DELAY_LONG_PRESS,
   HeaderComponent,
   FooterComponent,
-}: Props) {
+  children
+}: PropsWithChildren<Props>) {
   const imageList = useRef<VirtualizedList<ImageSource>>(null);
   const [opacity, onRequestCloseEnhanced] = useRequestClose(onRequestClose);
   const [currentImageIndex, onScroll] = useImageIndexChange(imageIndex, SCREEN);
@@ -161,6 +162,7 @@ function ImageViewing({
             })}
           </Animated.View>
         )}
+        {children}
       </View>
     </Modal>
   );
@@ -185,7 +187,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const EnhancedImageViewing = (props: Props) => (
+const EnhancedImageViewing = (props: PropsWithChildren<Props>) => (
   <ImageViewing key={props.imageIndex} {...props} />
 );
 
