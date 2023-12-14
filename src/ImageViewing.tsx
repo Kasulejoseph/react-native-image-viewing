@@ -125,13 +125,16 @@ function ImageViewing({
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
           initialScrollIndex={imageIndex}
+          // @ts-ignore
           getItem={(_, index) => images[index]}
           getItemCount={() => images.length}
+          // @ts-ignore
           getItemLayout={(_, index) => ({
             length: SCREEN_WIDTH,
             offset: SCREEN_WIDTH * index,
             index,
           })}
+          // @ts-ignore
           renderItem={({ item: imageSrc }) => (
             <ImageItem
               onZoom={onZoom}

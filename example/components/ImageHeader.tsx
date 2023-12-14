@@ -12,7 +12,7 @@ import {
   SafeAreaView,
   View,
   Text,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 
 type Props = {
@@ -40,30 +40,30 @@ const ImageHeader = ({ title, onRequestClose }: Props) => (
 
 const styles = StyleSheet.create({
   root: {
-    backgroundColor: "#00000077"
+    backgroundColor: "#00000077",
   },
   container: {
     flex: 1,
     padding: 8,
     flexDirection: "row",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   space: {
     width: 45,
-    height: 45
+    height: 45,
   },
   closeButton: {
     width: 45,
     height: 45,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   closeText: {
     lineHeight: 25,
     fontSize: 25,
     paddingTop: 2,
     includeFontPadding: false,
-    color: "#FFF"
+    color: "#FFF",
   },
   text: {
     maxWidth: 240,
@@ -73,8 +73,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 17,
     lineHeight: 17,
-    color: "#FFF"
-  }
+    color: "#FFF",
+  },
 });
 
 export default ImageHeader;

@@ -25,12 +25,12 @@ const styles = StyleSheet.create({
     height: 64,
     backgroundColor: "#00000077",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   text: {
     fontSize: 17,
-    color: "#FFF"
-  }
+    color: "#FFF",
+  },
 });
 
 export default ImageFooter;

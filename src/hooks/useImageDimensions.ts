@@ -48,6 +48,7 @@ const useImageDimensions = (image: ImageSource): Dimensions | null => {
         } else {
           // @ts-ignore
           Image.getSizeWithHeaders(
+            // @ts-ignore
             source.uri,
             source.headers,
             (width: number, height: number) => {
