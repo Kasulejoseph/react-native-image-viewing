@@ -30,6 +30,7 @@ import { city } from "./data/city";
 import { food } from "./data/food";
 
 import { ImageSource } from "../src/@types";
+import ImageOverlay from "./components/ImageOverlay";
 
 export default function App() {
   const [currentImageIndex, setImageIndex] = useState(0);
@@ -89,7 +90,9 @@ export default function App() {
         FooterComponent={({ imageIndex }) => (
           <ImageFooter imageIndex={imageIndex} imagesCount={images.length} />
         )}
-      />
+      >
+        <ImageOverlay />
+      </ImageViewing>
       <ImageList
         images={food.map((image) => image.thumbnail)}
         onPress={(index) => onSelect(food, index)}
