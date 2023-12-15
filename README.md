@@ -1,15 +1,20 @@
-# react-native-image-viewing
+# react-native-image-with-overlay-viewing
 
 > React Native modal component for viewing images as a sliding gallery.
 
 [![npm version](https://badge.fury.io/js/react-native-image-viewing.svg)](https://badge.fury.io/js/react-native-image-viewing)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
+This library is a fork of @jobtoday/react-native-image-viewing. It had all the features I needed for an image modal component, 
+except for the ability to pass a child component as props, which was crucial for my use case. This is particularly useful when 
+you want to add an overlay or watermark to your images.
+
 - 🔥Pinch zoom for both iOS and Android
 - 🔥Double tap to zoom for both iOS and Android
 - 🔥Supports swipe-to-close animation
 - 🔥Custom header and footer components
 - 🔥Uses VirtualizedList to optimize image loading and rendering
+- 🔥Custom child components
 
 Try with Expo: https://expo.io/@antonkalinin/react-native-image-viewing
 
@@ -20,19 +25,19 @@ Try with Expo: https://expo.io/@antonkalinin/react-native-image-viewing
 ## Installation
 
 ```bash
-yarn add react-native-image-viewing
+yarn add react-native-image-with-overlay-viewing
 ```
 
 or
 
 ```bash
-npm install --save react-native-image-viewing
+npm install --save react-native-image-with-overlay-viewing
 ```
 
 ## Usage
 
 ```jsx
-import ImageView from "react-native-image-viewing";
+import ImageView from "react-native-image-with-overlay-viewing";
 
 const images = [
   {
@@ -53,7 +58,9 @@ const [visible, setIsVisible] = useState(false);
   imageIndex={0}
   visible={visible}
   onRequestClose={() => setIsVisible(false)}
-/>
+>
+<Text style={{color: '#fff'}}>This is a text</Text>
+</ImageView>
 ```
 
 #### [See Example](https://github.com/jobtoday/react-native-image-viewing/blob/master/example/App.tsx#L62-L80)
@@ -82,7 +89,7 @@ const [visible, setIsVisible] = useState(false);
 
 ## Contributing
 
-To start contributing clone this repo and then run inside `react-native-image-viewing` folder:
+To start contributing clone this repo and then run inside `react-native-image-with-overlay-viewing` folder:
 
 ```bash
 yarn
