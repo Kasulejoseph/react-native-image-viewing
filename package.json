@@ -1,12 +1,12 @@
 {
   "name": "react-native-image-with-overlay-viewer",
-  "version": "0.0.1",
-  "description": "React Native modal component for viewing images as a sliding gallery",
+  "version": "0.0.2",
+  "description": "React Native modal component for viewing images as a sliding gallery + Adding text or icon watermark to your image",
   "main": "lib/commonjs/index.js",
   "types": "lib/typescript/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kasulejoseph/react-native-image-viewing.git"
+    "url": "git+https://github.com/Kasulejoseph/react-native-image-with-overlay-viewing.git"
   },
   "keywords": [
     "react",
@@ -14,6 +14,8 @@
     "image",
     "gallery",
     "image-gallery",
+    "watermark",
+    "overlay",
     "image-viewer"
   ],
   "scripts": {
@@ -36,9 +38,9 @@
   "author": "Joseph Kasule",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Kasulejoseph/react-native-image-viewing/issues"
+    "url": "https://github.com/Kasulejoseph/react-native-image-with-overlay-viewing/issues"
   },
-  "homepage": "https://github.com/Kasulejoseph/react-native-image-viewing#readme",
+  "homepage": "https://github.com/Kasulejoseph/react-native-image-with-overlay-viewing#readme",
   "devDependencies": {
     "@babel/runtime": "7.23.6",
     "@types/react": "~18.2.14",
